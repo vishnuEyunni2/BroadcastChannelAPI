@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Workers basic implementation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <p>This page demonstrates the use of BroadcastChannel API</p>
+    <br>
+    <button>Open Tab</button>
+  </header>
+  <main tabindex=0>
+    <section id="channelView">
+      <p>No. of contexts connected to the channel: <span id="connectedNo">0</span></p>
+    </section>
+    <script type="module">
+      let btn = document.querySelector('button');
+      btn.addEventListener('click', () => {
+        window.open(document.URL.replace('index', 'popup'), '_blank')
+      })
+    </script>
+    <script type="module" src="main.js"></script>
+  </main>
+</body>
+
+</html>
